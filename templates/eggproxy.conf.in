@@ -1,0 +1,15 @@
+[eggproxy]
+eggs_directory = ${dirs:eggs-cache}
+index = ${eggproxy:mirror-index}
+
+# Parametro en horas. determina si es necesario actualizar un paquete.
+update_interval = 24
+
+# Port number where proxy will run
+port = ${eggproxy:port}
+
+# always_refresh is off by default. Setting it to 1 forces eggproxy to
+# always attempt a pypi connection. Slower but fresher.
+always_refresh = 1
+# timeout is only needed for always_refresh: it sets a socket timeout.
+timeout = 3
